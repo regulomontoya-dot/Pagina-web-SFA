@@ -1,0 +1,289 @@
+.informacion-page {
+  background-color: #fefbfb; 
+  color: #4a000e;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.8s ease;
+}
+
+/*  Banner superior */
+.info-hero {
+  position: relative;
+  background: linear-gradient(
+      rgba(0, 40, 85, 0.75),
+      rgba(0, 40, 85, 0.75)
+    ),
+    url("../assets/images/fachada.jpg") center/cover no-repeat;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(155, 0, 36, 0.35);
+}
+.info-hero h1 {
+  font-size: 2.5rem;
+  z-index: 1;
+  color: #fff;
+}
+.info-hero p {
+  z-index: 1;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: #fff;
+}
+
+/*  Imagen principal */
+.info-image {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(155, 0, 36, 0.25);
+  transition: transform 0.4s ease;
+}
+.info-image:hover {
+  transform: scale(1.03);
+}
+
+/*  Títulos */
+.section-title {
+  color: #9b0024;
+  font-weight: 700;
+  border-left: 5px solid #9b0024;
+  padding-left: 12px;
+}
+
+/*  Tarjetas de “Qué Ofrecemos” */
+.presentacion-directora {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 20px rgba(155, 0, 36, 0.15);
+}
+
+.foto-directora {
+  width: 380px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(155, 0, 36, 0.25);
+  transition: transform 0.4s ease;
+}
+
+.foto-directora:hover {
+  transform: scale(1.05);
+}
+
+/*  Subtítulo y mensaje */
+.section-subtitle {
+  color: #9b0024 !important;
+  font-weight: 700;
+  border-left: 5px solid #b3002d;
+  padding-left: 10px;
+}
+
+.text-danger-custom {
+  color: #9b0024 !important;
+}
+
+.mensaje p {
+  text-align: justify;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+/*  Banner inferior */
+.informacion-page .banner-slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 3rem;
+  border-radius: 0;
+  box-shadow: 0 8px 24px rgba(155, 0, 36, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.informacion-page .slide-track {
+  display: flex;
+  width: calc(300px * 6);
+  animation: scrollBanner 25s linear infinite;
+}
+
+.informacion-page .slide-track img {
+  width: 100%;
+  max-width: 600px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.informacion-page .slide-track img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(155, 0, 36, 0.35);
+}
+
+@keyframes scrollBanner { 
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-300px * 3)); }
+}
+
+/*  Reseña Histórica - Línea de tiempo */
+.timeline-section {
+  background: #fff8f8;
+  padding: 4rem 1rem;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 90%;
+  max-width: 900px;
+}
+
+.timeline-header h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #9b0024;
+  margin: 0;
+}
+
+/*  Línea central */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #9b0024, #b3002d);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+/*  Ítems */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1.5rem 2rem;
+  z-index: 2;
+}
+
+.timeline-item.left { left: 0; text-align: right; }
+.timeline-item.right { left: 50%; text-align: left; }
+
+.timeline-content {
+  background: #ffffff;
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(155, 0, 36, 0.15);
+  transition: all 0.3s ease;
+  border-left: 5px solid transparent;
+}
+
+.timeline-content h4 {
+  color: #9b0024;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border: 4px solid #9b0024;
+  border-radius: 50%;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.timeline-item.left::before { right: -10px; }
+.timeline-item.right::before { left: -10px; }
+
+.timeline-content:hover {
+  transform: translateY(-6px);
+  border-left: 5px solid #9b0024;
+  box-shadow: 0 8px 25px rgba(155, 0, 36, 0.25);
+}
+
+.timeline-item:hover::before {
+  background: #9b0024;
+  transform: scale(1.25);
+}
+
+/*  Botón institucional */
+.btn-descargar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #9b0024, #b3002d);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(155, 0, 36, 0.25);
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.btn-descargar:hover {
+  background: linear-gradient(90deg, #7d001d, #9b0024);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(155, 0, 36, 0.35);
+}
+.historia-logo {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+
+@media (max-width: 768px) {
+
+  .timeline {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+
+  .timeline::before {
+    left: 15px;
+    transform: none;
+  }
+
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px; 
+    padding-right: 10px;
+    text-align: left;
+  }
+
+ 
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    text-align: left;
+  }
+
+ 
+  .timeline-item::before {
+    left: 6px;
+    right: auto;
+  }
+}

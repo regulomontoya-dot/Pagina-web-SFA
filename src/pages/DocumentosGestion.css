@@ -1,0 +1,83 @@
+.pdf-card {
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.pdf-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-doc {
+  background-color: #004aad;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+.btn-doc:hover {
+  background-color: #00398a;
+  color: #fff;
+}
+
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+.pdf-modal-content-wide {
+  position: relative;
+  width: 70%;
+  max-width: 900px;
+  height: 85%;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: zoomIn 0.3s ease;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.pdf-full-view-wide {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  background: #c62828;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+.close-btn:hover {
+  background: #a61b1b;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

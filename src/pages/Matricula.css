@@ -1,0 +1,447 @@
+.matricula-page {
+  background-color: #f8fbff;
+  color: #003366;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.8s ease;
+  font-size: 0.9rem;
+}
+
+/*  Reutiliza el banner institucional */
+.info-hero {
+ position: relative;
+  background: linear-gradient(
+      rgba(0, 40, 85, 0.75),
+      rgba(0, 40, 85, 0.75)
+    ),
+    url("../assets/images/fachada.jpg") center/cover no-repeat;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-hero .overlay {
+ position: absolute;
+  inset: 0;
+  background: rgba(0, 40, 85, 0.7);
+}
+
+.info-hero h1 {
+  font-size: 2.5rem;
+  z-index: 1;
+}
+
+.info-hero p {
+  z-index: 1;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/*  Caja informativa */
+.matricula-info {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Tarjetas PDF */
+.admision-pdfs {
+  background: #f8fbff;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 74, 173, 0.08);
+}
+
+.pdf-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+}
+
+.pdf-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 74, 173, 0.15);
+}
+
+.pdf-icon {
+  background: rgba(0, 74, 173, 0.08);
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  transition: background 0.3s ease;
+}
+
+.pdf-card:hover .pdf-icon {
+  background: rgba(0, 74, 173, 0.2);
+}
+
+.pdf-titulo {
+  font-weight: 600;
+  color: #003366;
+  font-size: 1rem;
+}
+
+/*  Modal PDF */
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(3px);
+}
+
+.pdf-modal-content-wide {
+  position: relative;
+  width: 70%;
+  max-width: 900px;
+  height: 85%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: scaleIn 0.3s ease;
+}
+
+.pdf-full-view-wide {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #c62828;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 35px;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #a61b1b;
+}
+
+/* Animación */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Mini banner lateral (slider automático) */
+.mini-slider-container {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 74, 173, 0.15);
+}
+
+.mini-slider-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.mini-slider-container img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/*  Ajustes responsive */
+@media (max-width: 768px) {
+  .mini-slider-container {
+    height: 250px;
+    margin-top: 2rem;
+  }
+}
+/* Licenciamiento */
+.licenciamiento-logo {
+  max-width: 280px;
+  filter: drop-shadow(0 4px 12px rgba(0, 74, 173, 0.25));
+  transition: transform 0.4s ease;
+}
+
+.licenciamiento-logo:hover {
+  transform: scale(1.05);
+}
+
+.licenciamiento-periodo p {
+  font-size: 1.1rem;
+  color: #004aad;
+  background: rgba(0, 74, 173, 0.08);
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .licenciamiento-logo {
+    max-width: 200px;
+  }
+  .licenciamiento-periodo p {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+/*  Biblioteca Virtual */
+.biblioteca-contenido p {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: center;
+  color: #333;
+}
+
+.biblioteca-contenido .section-subtitle {
+  color: #004aad;
+  font-weight: 700;
+  border-left: 5px solid #004aad;
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.biblioteca-contenido .btn-descargar {
+  font-size: 1rem;
+  padding: 0.8rem 1.6rem;
+}
+
+/*  Servicios Complementarios */
+.servicio-card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 100%;
+  min-height: 270px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 74, 173, 0.15);
+}
+
+/*  Imagen más grande y uniforme */
+.servicio-img-container {
+  flex: 0 0 45%; 
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.servicio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.servicio-card:hover .servicio-img {
+  transform: scale(1.05);
+}
+
+/*  Contenido del texto */
+.servicio-info {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.servicio-info p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 0.3rem;
+}
+
+.servicio-info h4 {
+  font-size: 1.2rem;
+  color: #004aad;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+/*  Para que todas tengan la misma altura */
+.row.g-4 > [class*="col-"] {
+  display: flex;
+}
+
+.col-lg-6 .servicio-card {
+  width: 100%;
+}
+
+/*  Responsive */
+@media (max-width: 992px) {
+  .servicio-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .servicio-img-container {
+    flex: none;
+    height: 220px;
+  }
+
+  .servicio-info {
+    text-align: center;
+    padding: 1.2rem;
+  }
+}
+
+
+/*  Bolsa Laboral */
+.bolsa-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+  height: 100%;
+}
+
+.bolsa-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 74, 173, 0.15);
+}
+
+.bolsa-img-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.bolsa-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.bolsa-card:hover .bolsa-img {
+  transform: scale(1.08);
+}
+
+.bolsa-card h5 {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+/*  Responsive */
+@media (max-width: 768px) {
+  .bolsa-img-container {
+    height: 180px;
+  }
+}
+
+/*  Ajuste general de las tarjetas de enlaces */
+.enlace-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.enlace-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 74, 173, 0.15);
+}
+
+/*  Contenedor del logo */
+.enlace-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  overflow: hidden;
+  background: #f5f8ff;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+/*  Imagen */
+.enlace-logo {
+  width: 100%;
+  height: auto;
+  max-height: 100px;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+/*  Hover */
+.enlace-card:hover .enlace-logo {
+  transform: scale(1.05);
+}
+
+
+.enlace-logo.wide {
+  max-height: 70px; 
+  width: auto;
+  aspect-ratio: auto;
+}
+
+
+.enlace-card h5 {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .enlace-logo-container {
+    height: 100px;
+  }
+}

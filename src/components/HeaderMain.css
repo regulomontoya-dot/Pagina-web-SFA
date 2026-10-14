@@ -1,0 +1,215 @@
+
+.header-main{
+  position: sticky;
+  top: 0;             
+  z-index: 10;         
+  background:#fff;
+  
+ 
+
+}
+
+.header-main.transparent {
+ background: rgba(155, 0, 36, 0.7); 
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid rgba(58, 38, 38, 0.25);
+  transition: background 0.6s ease, border-color 0.6s ease;
+}
+.header-main.transparent .nav-link {
+  color: #ffffff;
+}
+
+.header-main.transparent .nav-link:hover {
+  color: #00000091; 
+}
+
+
+.header-main.transparent .institute-name {
+  color: #ffffff;
+  transition: color 0.6s ease;
+}
+
+
+.header-main.transparent .main-logo {
+  filter: brightness(0.95);
+  transition: filter 0.6s ease;
+}
+
+
+.main-logo{ 
+  height: 55px;         
+  width: auto;
+  transform: scale(1.2); 
+  transform-origin: center left; 
+  margin-right: 10px;
+}
+.institute-name{ 
+  color:#003366; 
+  font-weight:700; 
+  text-transform:uppercase; 
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+ padding-right: 60px;
+}
+
+.navbar-brand .institute-name {
+  margin-left: 12px;
+  line-height: 1.1;  
+  display: inline-block;
+  text-align:left;
+}
+
+.navbar-nav .nav-link{ 
+  color:#000000; 
+  font-weight:400; 
+  padding:.6rem 1rem;
+  
+ }
+
+.navbar-nav .nav-link:hover{
+  color: #9b0024; 
+  transform: translateY(-1px);
+  font-weight: 500; 
+  }
+
+
+.dropdown-menu {
+  border-radius: 0;
+  border-top: 2px solid #ffcc00;
+  font-size: 0.95rem;
+}
+
+.dropdown-item:hover {
+  background-color: #ffcc00;
+  color: #003366;
+}
+
+
+.dropdown-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0,0,0,0.15), transparent);
+  margin: 0.6rem 0;
+}
+.header-main.transparent .dropdown-divider {
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+}
+
+
+
+.navbar-toggler {
+  border-color: #003366;
+}
+
+
+
+
+@media (max-width: 992px) {
+
+  .navbar-nav .dropdown-menu {
+    position: static !important; 
+    display: none; 
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+    border-top: none;
+    backdrop-filter: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .navbar-nav .dropdown-menu.show {
+    display: block !important;
+  }
+
+  .navbar-nav .dropdown-item {
+    padding: 0.5rem 1rem;
+    color: #003366 !important;
+    text-align: left;
+  }
+
+  .navbar-nav .dropdown-item:hover {
+    background-color: rgba(255, 204, 0, 0.2) !important;
+    color: #000000 !important;
+  }
+
+
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+ 
+  .dropdown-menu {
+    text-align: left !important;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .main-logo {
+    height: 40px;
+  }
+
+  .institute-name {
+    display: none;
+    
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+
+.dropdown-menu {
+ display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+}
+.dropdown-menu.show {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0);
+}
+
+
+.dropdown-item {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: #9b0024;
+}
+
+.nav-item.dropdown > .nav-link::after {
+  content: "";
+  display: inline-block;
+  margin-left: 6px;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform 0.3s ease;
+}
+
+
+.nav-item.dropdown:hover > .nav-link::after {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,60 @@
+.carrera-hero-modern {
+  position: relative;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrera-hero-overlay {
+  background: rgba(0, 30, 80, 0.6);
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.carrera-hero-overlay h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.carrera-hero-overlay p {
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+.info-card {
+  line-height: 1.6;
+}
+
+.info-card ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.sidebar-card {
+  border-left: 4px solid #004aad;
+}
+
+.btn-download {
+  background-color: #004aad;
+  color: white;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #002d6b;
+  transform: scale(1.03);
+}

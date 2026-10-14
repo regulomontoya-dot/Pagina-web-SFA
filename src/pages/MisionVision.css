@@ -1,0 +1,155 @@
+.mision-vision-page {
+  background: #f8fbff;
+  color: #003366;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.8s ease;
+}
+
+/*  Banner */
+.mv-hero {
+  position: relative;
+  background: linear-gradient(
+      rgba(0, 40, 85, 0.75),
+      rgba(0, 40, 85, 0.75)
+    ),
+    url("../assets/images/fachada.jpg") center/cover no-repeat;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mv-hero .overlay {
+  position: absolute;
+  inset: 0;
+}
+.mv-hero h1 {
+  font-size: 2.6rem;
+}
+.mv-hero p {
+  opacity: 0.9;
+}
+
+/*  Imágenes */
+.mv-image {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+.mv-image:hover {
+  transform: scale(1.03);
+}
+
+/*  Tarjetas */
+.mv-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.mv-card:hover {
+  transform: translateY(-6px);
+}
+
+/*  Títulos e íconos */
+.mv-icon {
+  font-size: 2.2rem;
+  color: #9b0024;
+  margin-bottom: 0.6rem;
+}
+.section-title {
+  color: #9b0024;
+  border-left: 5px solid #b3002d;
+  font-weight: 700;  
+  padding-left: 12px;
+  margin-bottom: 1rem;
+}
+
+/*  Acordeón de valores */
+.valores-acordeon details {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0rem 1rem;
+  margin-bottom: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.valores-acordeon details:hover {
+  background: #fff5f6;
+  border-color: #b3002d;
+}
+
+.valores-acordeon summary {
+  font-weight: 700;
+  color: #9b0024;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.valores-acordeon summary::after {
+  content: "+";
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #9b0024;
+}
+
+.valores-acordeon details[open] summary::after {
+  content: "−";
+  color: #9b0024;
+}
+
+.valores-acordeon ul,
+.valores-acordeon p {
+  margin-top: 0.6rem;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6rem;
+  padding-left: 1rem;
+}
+
+.valores-acordeon ul {
+  list-style: disc;
+}
+
+.valores-acordeon details[open] {
+  border-left: 5px solid #9b0024;
+  background: #fffdfd;
+  box-shadow: 0 4px 10px rgba(155, 0, 36, 0.08);
+}
+
+
+/*  Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*  Responsivo */
+@media (max-width: 768px) {
+  .mv-hero h1 {
+    font-size: 2rem;
+  }
+  .mv-card {
+    padding: 1.5rem;
+  }
+  .mv-image {
+    margin-bottom: 1.5rem;
+  }
+  .valores-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

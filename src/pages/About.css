@@ -1,0 +1,29 @@
+.about-page {
+  background: #f9fbff;
+  color: #333;
+}
+
+.about-page h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #003366;
+}
+
+.about-page p {
+  line-height: 1.6;
+}
+
+.about-page .btn {
+  background: #003366;
+  border: none;
+  transition: background 0.3s ease;
+}
+.about-page .btn:hover {
+  background: #0151fc;
+}
+
+.about-mision {
+  background: linear-gradient(135deg, #003366, #0151fc);
+  border-top: 4px solid #ffcc00;
+  border-bottom: 4px solid #ffcc00;
+}

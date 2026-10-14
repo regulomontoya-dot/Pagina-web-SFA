@@ -1,0 +1,103 @@
+.contact-page {
+  background-color: #f8fbff;
+  color: #002b5c;
+  font-family: "Poppins", sans-serif;
+}
+
+/*  Banner */
+.contact-hero {
+ position: relative;
+  background: linear-gradient(
+      rgba(0, 40, 85, 0.75),
+      rgba(0, 40, 85, 0.75)
+    ),
+    url("../assets/images/fachada.jpg") center/cover no-repeat;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 45, 85, 0.75);
+}
+.contact-hero h1 {
+  font-size: 2.5rem;
+  z-index: 1;
+}
+.contact-hero p {
+  z-index: 1;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/*  Secciones */
+.section-title {
+  color: #9b0024;
+  font-weight: 700;
+  border-left: 5px solid #b3002d ;
+  padding-left: 12px;
+  margin-bottom: 1rem;
+  
+}
+
+.icon {
+  color: #007bff;
+  margin-right: 8px;
+}
+
+/*  Mapa */
+.map-container iframe {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+/*  Responsivo */
+@media (max-width: 768px) {
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+  .contact-hero {
+    height: 35vh;
+  }
+}
+
+/*  Tarjeta tipo LocalInstitucional */
+.info-card-sede {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/*  Títulos estilo LocalInstitucional */
+.title-sede {
+  color: #002b5c;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/*  Lista con íconos */
+.info-list-sede {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.info-list-sede li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/*  Íconos estilo LocalInstitucional */
+.icon-sede {
+  font-size: 1.2rem;
+  color: #003580;
+  margin-top: 3px;
+}

@@ -1,0 +1,180 @@
+.becas-page {
+  background-color: #f8fbff;
+  color: #003366;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.8s ease;
+  font-size: 0.9rem;
+}
+
+/*  Banner institucional */
+.info-hero {
+  position: relative;
+  background: linear-gradient(
+      rgba(0, 40, 85, 0.75),
+      rgba(0, 40, 85, 0.75)
+    ),
+    url("../assets/images/fachada.jpg") center/cover no-repeat;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 40, 85, 0.7);
+}
+
+.info-hero h1 {
+  font-size: 2.5rem;
+  z-index: 1;
+}
+
+.info-hero p {
+  z-index: 1;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/*  Caja informativa */
+.becas-info {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.styled-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.styled-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.styled-list li::before {
+  content: "▸";
+  color: #004aad;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*  Tarjetas PDF (idénticas) */
+.admision-pdfs {
+  background: #f8fbff;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 74, 173, 0.08);
+}
+
+.pdf-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+}
+
+.pdf-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 74, 173, 0.15);
+}
+
+.pdf-icon {
+  background: rgba(0, 74, 173, 0.08);
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  transition: background 0.3s ease;
+}
+
+.pdf-card:hover .pdf-icon {
+  background: rgba(0, 74, 173, 0.2);
+}
+
+.pdf-titulo {
+  font-weight: 600;
+  color: #003366;
+  font-size: 1rem;
+}
+
+/*  Modal PDF */
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(3px);
+}
+
+.pdf-modal-content-wide {
+  position: relative;
+  width: 70%;
+  max-width: 900px;
+  height: 85%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: scaleIn 0.3s ease;
+}
+
+.pdf-full-view-wide {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #c62828;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 35px;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #a61b1b;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

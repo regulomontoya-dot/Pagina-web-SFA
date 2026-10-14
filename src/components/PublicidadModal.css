@@ -1,0 +1,43 @@
+.publi-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.publi-modal-box {
+  background: #fff;
+  padding: 0;
+  border-radius: 12px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.publi-modal-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.publi-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #b3002d;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}

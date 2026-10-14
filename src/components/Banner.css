@@ -1,0 +1,152 @@
+.banner-slider {
+  width: 100%;
+  height: 70vh;
+  max-height: 600px;
+  min-height: 300px;
+  overflow: hidden;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.header-main + .banner-slider {
+  margin-top: 0 !important;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(155, 0, 36, 0.7),
+    rgba(125, 0, 29, 0.7)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+
+.slide-content {
+  color: #ffffff;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.slide-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+  color: #ffcc00; 
+  text-transform: uppercase;
+}
+
+.slide-content p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #ffffff;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #d56565; 
+  width: 120px;
+  height: 50px;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 28px;
+  font-weight: 900;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+}
+
+
+.swiper-button-prev {
+  left: 20px;
+}
+.swiper-button-next {
+  right: 20px;
+}
+
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.6); 
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+
+.swiper-pagination-bullet-active {
+  background: #9b0024; 
+  box-shadow: 0 0 6px rgba(155, 0, 36, 0.6); 
+  transform: scale(1.2);
+}
+
+
+@keyframes softPulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  animation: softPulse 3s ease-in-out infinite;
+}
+
+
+.swiper,
+.swiper-slide,
+.slide {
+  height: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .banner-slider {
+    height: 50vh;
+    min-height: 250px;
+  }
+
+  .slide-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .slide-content p {
+    font-size: 0.9rem;
+  }
+}

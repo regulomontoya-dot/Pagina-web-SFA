@@ -1,0 +1,116 @@
+.autoridades-page {
+  background: #f8fbff;
+  color: #003366;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.autoridades-hero {
+  position: relative;
+  background: linear-gradient(rgba(0, 40, 85, 0.75), rgba(0, 40, 85, 0.75)),
+    url("../assets/images/fachada.jpg") center/cover no-repeat;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.autoridades-hero .overlay {
+  position: absolute;
+  inset: 0;
+}
+.autoridades-hero h1 {
+  font-size: 2.6rem;
+}
+.autoridades-hero p {
+  opacity: 0.9;
+}
+
+
+.autoridad-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.autoridad-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 74, 173, 0.15);
+}
+
+
+.autoridad-foto {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 74, 173, 0.3);
+}
+
+
+.autoridad-frase {
+  font-style: italic;
+  color: #444;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.autoridad-nombre {
+  color: #9b0024;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.autoridad-cargo {
+  color: #9b0024;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.autoridad-correo {
+  color: #9b0024;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.autoridad-correo:hover {
+  color: #b3002d;
+  text-decoration: underline;
+}
+
+
+.section-title,
+.section-subtitle {
+  font-weight: 700;
+  color: #9b0024 !important;
+  border-left: 5px solid #b3002d !important;
+  padding-left: 12px;
+}
+
+.autoridad-info {
+  margin-top: 0.8rem;
+  text-align: left;
+}
+.autoridad-linea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #003366;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  word-break: break-word;
+}
+
+
+@media (max-width: 768px) {
+  .autoridad-foto {
+    width: 110px;
+    height: 110px;
+  }
+  .autoridad-card {
+    padding: 1.2rem;
+  }
+}

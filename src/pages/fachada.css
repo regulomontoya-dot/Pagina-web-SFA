@@ -1,0 +1,92 @@
+.informacion-page {
+  background-color: #f8fbff;
+  color: #003366;
+  font-family: "Poppins", sans-serif;
+}
+
+/*  Banner superior */
+.info-hero {
+  position: relative;
+  background: url("../assets/images/banner-campus.jpg") center/cover no-repeat;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 40, 85, 0.7);
+}
+.info-hero h1 {
+  font-size: 2.5rem;
+  z-index: 1;
+}
+.info-hero p {
+  z-index: 1;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/*  Imagen principal */
+.info-image {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+.info-image:hover {
+  transform: scale(1.03);
+}
+
+/* Títulos */
+.section-title {
+  color:  #9b0024;
+  font-weight: 700;
+  border-left: 5px solid #b3002d ;
+  padding-left: 12px;
+}
+
+/*  Tarjetas de “Qué Ofrecemos” */
+.ofrecemos-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ofrecemos-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 123, 255, 0.25);
+}
+.ofrecemos-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+.icon-box {
+  font-size: 1.8rem;
+  color: #006ce0;
+  margin-bottom: 0.8rem;
+}
+
+/*  Agradecimiento */
+.agradecimiento {
+  max-width: 800px;
+}
+.agradecimiento h3 {
+  font-size: 1.8rem;
+}
+.agradecimiento p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .info-hero h1 {
+    font-size: 2rem;
+  }
+  .ofrecemos-card {
+    padding: 1rem;
+  }
+}
